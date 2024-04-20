@@ -15,8 +15,8 @@
 
 static Attack attacks[] = {
     {
-        .title = "The Kitchen Sink",
-        .text = "Flood all attacks at once",
+        .title = "Musketeers",
+        .text = "All for one and one for All",
         .protocol = NULL,
         .payload =
             {
@@ -25,8 +25,8 @@ static Attack attacks[] = {
             },
     },
     {
-        .title = "BT Settings Flood",
-        .text = "Fills available BT devices",
+        .title = "BSettingsF",
+        .text = "Fills available",
         .protocol = &protocol_nameflood,
         .payload =
             {
@@ -35,7 +35,7 @@ static Attack attacks[] = {
             },
     },
     {
-        .title = "iOS 17 Lockup Crash",
+        .title = "1CrashKeks7",
         .text = "Newer iPhones, long range",
         .protocol = &protocol_continuity,
         .payload =
@@ -308,7 +308,7 @@ static void draw_callback(Canvas* canvas, void* _ctx) {
     canvas_set_font(canvas, FontSecondary);
     const Icon* icon = protocol ? protocol->icon : &I_ble_spam;
     canvas_draw_icon(canvas, 4 - (icon == &I_ble_spam), 3, icon);
-    canvas_draw_str(canvas, 14, 12, "BLE Spam");
+    canvas_draw_str(canvas, 14, 12, "aNoNyMoUs");
 
     switch(state->index) {
     case PageHelpBruteforce:
@@ -387,9 +387,9 @@ static void draw_callback(Canvas* canvas, void* _ctx) {
             48,
             AlignLeft,
             AlignTop,
-            "See \e#more info\e# and change\n"
-            "\e#attack options\e# by holding\n"
-            "Ok on each attack page",
+            "Du \e#willst\e# also in die\n"
+            "\e#Clique\e#? Dann\n"
+            "ficke die \e#Dicke\e#! <3\e#",
             false);
         break;
     case PageAboutCredits:
@@ -403,9 +403,9 @@ static void draw_callback(Canvas* canvas, void* _ctx) {
             48,
             AlignLeft,
             AlignTop,
-            "App+Spam: \e#WillyJL\e# MNTM\n"
-            "Apple+Crash: \e#ECTO-1A\e#\n"
-            "Android+Win: \e#Spooks4576\e#\n"
+            "Komm in die \e#Clique\e# und\n"
+            "ficke die \e#Dicke <3\e# =)\n"
+            "Dev: \e#AnoNops\e#\n"
             "                                   Version \e#" FAP_VERSION "\e#",
             false);
         break;
@@ -434,7 +434,7 @@ static void draw_callback(Canvas* canvas, void* _ctx) {
 
         canvas_set_font(canvas, FontBatteryPercent);
         if(payload->mode == PayloadModeBruteforce) {
-            canvas_draw_str_aligned(canvas, 64, 22, AlignCenter, AlignBottom, "Bruteforce");
+            canvas_draw_str_aligned(canvas, 64, 22, AlignCenter, AlignBottom, "B f");
             if(delays[state->delay] < 100) {
                 snprintf(str, sizeof(str), "%ims>", delays[state->delay]);
             } else {
@@ -479,10 +479,10 @@ static void draw_callback(Canvas* canvas, void* _ctx) {
     if(state->lock_warning) {
         canvas_set_font(canvas, FontSecondary);
         elements_bold_rounded_frame(canvas, 14, 8, 99, 48);
-        elements_multiline_text(canvas, 65, 26, "To unlock\npress:");
-        canvas_draw_icon(canvas, 65, 42, &I_Pin_back_arrow_10x8);
-        canvas_draw_icon(canvas, 80, 42, &I_Pin_back_arrow_10x8);
-        canvas_draw_icon(canvas, 95, 42, &I_Pin_back_arrow_10x8);
+        elements_multiline_text(canvas, 65, 26, "Suche nach\nSpielen:/");
+        canvas_draw_icon(canvas, 65, 42, &I_search_10px);
+        canvas_draw_icon(canvas, 80, 42, &I_search_10px);
+        canvas_draw_icon(canvas, 95, 42, &I_search_10px);
         canvas_draw_icon(canvas, 16, 13, &I_WarningDolphin_45x42);
         canvas_draw_dot(canvas, 17, 61);
     }
