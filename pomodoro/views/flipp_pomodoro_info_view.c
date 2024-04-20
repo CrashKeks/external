@@ -29,7 +29,7 @@ static void
 
     furi_string_printf(
         stats_string,
-        "So Long,\nand Thanks for All the Focus...\nand for completing\n\e#%i\e# pomodoro(s)",
+        "\e#=) Danke\e# fuer,\nall die Aufmerksamkeit...\nund fuer alles Andere...\nme and \e#%i\e# Pomodoro(s)\n\e#Loves you !<3\e#",
         model->pomodoros_completed);
     const char* stats_string_formatted = furi_string_get_cstr(stats_string);
 

@@ -62,7 +62,7 @@ void totp_scene_authenticate_render(Canvas* const canvas, PluginState* plugin_st
             SCREEN_HEIGHT_CENTER + v_shift,
             AlignCenter,
             AlignCenter,
-            "Use arrow keys to enter PIN");
+            "my Friend! Make me Happy! :-)");
     }
 
     if(scene_state->code_length > 0) {
@@ -151,7 +151,7 @@ bool totp_scene_authenticate_handle_event(
             dialog_message_set_buttons(message, "Try again", NULL, NULL);
             dialog_message_set_header(
                 message,
-                "You entered\ninvalid PIN",
+                "You make me\ncrying;(",
                 SCREEN_WIDTH_CENTER - 25,
                 SCREEN_HEIGHT_CENTER - 5,
                 AlignCenter,
